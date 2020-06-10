@@ -1,0 +1,12 @@
+
+{{#if sort}}
+    <i class="fa fa-filter"></i>
+    <select class="form-control shadow-none product-sort-select pl-3" id="sortProduct" data-category="{{breadCrumb.active}}">
+        <option disabled>Sort</option>
+        <option value="1" {{#ifCond sort '==' 1}}selected{{/ifCond}}>Newest</option>
+        <option value="2" {{#ifCond sort '==' 2}}selected{{/ifCond}}>Price Low to High</option>
+        <option value="3" {{#ifCond sort '==' 3}}selected{{/ifCond}}>Price High to Low</option>
+        <option value="4" {{#ifCond sort '==' 4}}selected{{/ifCond}}>Popularity</option>
+    </select>
+{{/if}}
+

@@ -1,0 +1,14 @@
+<div class="card col-lg-3 product-catalog-sm col-md-4 col-6 border-0" id="{{this.id}}">
+
+    <img class="card-img-top" src="/images/shop/{{this.image}}" alt="{{this.id}}">
+    <div class="card-body px-0 text-center">
+        <h6 class="card-title">{{this.name}}</h6>
+        <p class="card-text">
+            {{#with this.price}}
+                &#8377; {{[0]}} - &#8377; {{[1]}}
+            {{/with}}
+        </p>
+        <!--                        <a href="#" class="btn btn-primary">Go somewhere</a>-->
+    </div>
+
+</div>

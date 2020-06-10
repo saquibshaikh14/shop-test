@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://saquib:saquib@786@shop-obnh2.mongodb.net/test",
+  "testMongoURI": "mongodb://127.0.0.1:27017/shop"
+}

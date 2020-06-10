@@ -1,0 +1,41 @@
+{{#ifCond paginate.totalPages '>' 0}}
+    <nav aria-label="...">
+        <ul class="pagination justify-content-center justify-content-md-start">
+            {{#each paginate.pages}}
+                <li class="page-item {{#ifCond ../paginate.currentPage '==' this}}active{{/ifCond}}">
+                    <a class="page-link shadow-none" href="/products/{{../breadCrumb.active}}?p={{this}}">{{this}}</a>
+                </li>
+            {{/each}}
+
+        </ul>
+    </nav>
+
+
+{{/ifCond}}
+
+
+
+<!--<nav aria-label="...">-->
+<!--    <ul class="pagination justify-content-center justify-content-md-start">-->
+<!--        <li class="page-item disabled">-->
+<!--            <span class="page-link">1</span>-->
+<!--        </li>-->
+<!--        <li class="page-item">-->
+<!--            <a class="page-link" href="#">1</a>-->
+<!--        </li>-->
+<!--        <li class="page-item active">-->
+<!--                        <span class="page-link">2-->
+<!--                        </span>-->
+<!--        </li>-->
+<!--        <li class="page-item">-->
+<!--            <a class="page-link" href="#">3</a>-->
+<!--        </li>-->
+
+<!--        </li>-->
+<!--        <li class="page-item">-->
+<!--            <a class="page-link" href="#">last</a>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--</nav>-->
+
+<!------------        pagination----------------------------->

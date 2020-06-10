@@ -1,0 +1,16 @@
+<nav aria-label="breadcrumb">
+    <ul class="breadcrumb bg-light">
+        <li class="breadcrumb-item">
+            <a href="/"><i class="fa fa-home"></i> Home</a>
+        </li>
+        {{# if breadCrumb.link}}
+            <li class="breadcrumb-item">
+                <a href="/products/{{breadCrumb.link}}">{{breadCrumb.link}}</a>
+            </li>
+
+        {{/if}}
+
+        <li class="breadcrumb-item">{{breadCrumb.active}}</li>
+
+    </ul>
+</nav>

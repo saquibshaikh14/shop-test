@@ -1,0 +1,32 @@
+{
+  "name": "shop",
+  "version": "1.0.0",
+  "description": "shopping app",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon --ext js,hbs --ignore public",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/test-shop-app/shop.git"
+  },
+  "author": "saquib",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/test-shop-app/shop/issues"
+  },
+  "homepage": "https://github.com/test-shop-app/shop#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "config": "^3.3.1",
+    "connect-livereload": "^0.6.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "http-errors": "^1.7.3",
+    "livereload": "^0.9.1",
+    "mongoose": "^5.9.18",
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7"
+  }
+}

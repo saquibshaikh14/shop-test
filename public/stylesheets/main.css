@@ -1,0 +1,50 @@
+/*
+ * Copyright (c) 2020. Developed by saquib shaikh.
+ */
+
+/* ------ first row ------*/
+
+/*-left-panel-*/
+.left-panel {
+    font-size: 110%;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.shop-category-heading{
+    cursor: text;
+    text-decoration: none;
+    color: #744040;
+}
+.shop-category-heading:hover {
+    cursor: text;
+    text-decoration: none;
+    color: #744040;
+}
+.left-panel .fa-caret-right{
+    position: absolute;
+    right: 10px;
+}
+
+/*--------right panel---*/
+
+/*sort icon*/
+.right-panel .fa-filter{
+    position: absolute;
+    top: 52%;
+    color: #6a6967;
+    transform: translateY(-50%);
+    left: 19px;
+}
+@media(min-width: 991px){
+    .right-panel .fa-filter{
+        top: 38%;
+    }
+}
+/*--------product catalog-----*/
+.right-panel .product-catalog-sm{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.right-panel .product-catalog-sm h6{
+    text-transform: capitalize;
+}

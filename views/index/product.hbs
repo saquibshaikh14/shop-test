@@ -1,0 +1,68 @@
+<!--importing the header element from partials/include/head.hbs-->
+{{> include/head }}
+
+<!--importing navbar from partials/navabr.hbs-->
+{{> components/navbar }}
+
+<div class="container">
+    <!--        first row     -->
+    <div class="row">
+        <!-- left panel -->
+        <div class="col-lg-3 col-md-4 left-panel">
+            {{> components/leftPanel }}
+        </div>
+
+        <!--    right panel-content    -->
+        <div class="col-lg-9 col-md-8 right-panel">
+
+            {{> components/breadcrumb }}
+
+            <!---------     breadcrumb   -------->
+
+
+            <div class="row">
+
+                {{#if paginate }}
+                    <div class="col-lg-6">
+                        {{> components/pagination paginate=paginate}}
+                    </div>
+
+                    <div class="col-lg-3 col-6 pt-2 text-lg-right">
+                        {{> components/showProductCount paginate=paginate}}
+                    </div>
+
+                    <div class="col-lg-3 col-6">
+                        {{> components/productSort sort=sort}}
+                    </div>
+
+                {{/if}}
+
+
+
+                <!-----   pagination/filters------------>
+            </div>
+
+            <div class="row mt-4">
+
+
+                {{#each data }}
+                    {{> components/productSmall this}}
+
+                {{/each}}
+
+            </div>
+
+            <!------   product catalog ends------>
+        </div>
+        <!--        right panel ends------------------->
+
+    </div>
+    <!--    first row ends ------->
+
+
+</div>
+<!--container div ends-->
+
+
+<!--importing footer element from partials/include/foot.hbs-->
+{{> include/foot }}

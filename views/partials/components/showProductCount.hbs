@@ -1,0 +1,23 @@
+{{#if paginate}}
+
+    <small>Showing
+        {{#ifCond paginate.endIndex '<' 0 }}
+            0
+        {{else}}
+            {{#basicCalculation paginate.startIndex '+' 1}}
+            {{/basicCalculation}}
+        {{/ifCond}}
+        -
+        {{#ifCond paginate.endIndex '<' 0 }}
+            0
+        {{else}}
+            {{#basicCalculation paginate.endIndex '+' 1}}
+            {{/basicCalculation}}
+        {{/ifCond}}
+        of
+        {{paginate.totalItems}}
+    </small>
+
+{{/if}}
+
+
