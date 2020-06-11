@@ -25,6 +25,7 @@ router.get('/:category', async (req, res) => {
         const page = parseInt(req.query.p||1); //get current page number
         console.log(sortMethod, page);
         var modCategory = category.trim().split(' ').join('_').toLowerCase(); //remove space and make mongoose suitable
+        console.log(modCategory)
         const itemPerPage = 4;
 
         const Product = mongoose.model(modCategory, productSchema); //creating dynamic schema
@@ -40,7 +41,7 @@ router.get('/:category', async (req, res) => {
 
         let data = {};
         data = products.map(product => {
-            return {name: product.name,id: product._id, image: product.image, price: product.price};
+            return {name: product.name,id: product._id, image: product.image, price: product.price,group: modCategory};
         })
         //console.log(data);
 
