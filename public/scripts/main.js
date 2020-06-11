@@ -23,14 +23,13 @@ $('document').ready(function () {
 
     //product catalog
     $('.product-catalog-sm').on('click', function(){
-        console.log($(this).attr('id'));
-        $(location).attr('href', `/products/pens/${$(this).attr('id')}`);
+
+        $(location).attr('href', `/products/${$(this).attr('data-group')}/${$(this).attr('id')}`);
     });
 
     //sort product
     $('#sortProduct').on('change', function () {
         var uriComponent = $(this).attr('data-category');
-
         var url = `/products/${encodeURIComponent(uriComponent)}?p=1&sortMethod=${$(this).val()}`;
         $(location).attr('href', url);
     });

@@ -26,7 +26,7 @@ router.get('/:category', async (req, res) => {
         console.log(sortMethod, page);
         var modCategory = category.trim().split(' ').join('_').toLowerCase(); //remove space and make mongoose suitable
         console.log(modCategory)
-        const itemPerPage = 4;
+        const itemPerPage = 8;
 
         const Product = mongoose.model(modCategory, productSchema); //creating dynamic schema
 
